@@ -36,22 +36,14 @@ getterMethods: {
     },
 },
 
-// setterMethods: {
-//     yearOlder(age) {
-//         return age + 1;
-//     }
-// }
 
 });
 
 User.prototype.haveBirthday = function () {
-    //this.setDataValue(this.age, this.age + 1)
-
-    return User.findOne({
-        where: {
-            id: this.id
-        }
+    return this.update({
+        age: this.age + 1
     })
+    .catch(new Error('haveBirthday function non-operational'))
 }
 
 
