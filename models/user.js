@@ -12,7 +12,7 @@ const User = db.define('user', {
 
   age: {
     type: Sequelize.INTEGER,
-    validation: {
+    validate: {
         min: 18
     }
   },
